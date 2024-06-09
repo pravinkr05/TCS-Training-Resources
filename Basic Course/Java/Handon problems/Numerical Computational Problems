@@ -109,6 +109,50 @@ Create a Bank class with a main method to test the BankAccount class by creating
 code:
 
 
+class BankAccount {
+    private int accountNumber;
+    private String accountHolderName;
+    private double balance;
+
+    public BankAccount(int accountNumber, String accountHolderName, double initialBalance) {
+        this.accountNumber = accountNumber;
+        this.accountHolderName = accountHolderName;
+        this.balance = initialBalance;
+    }
+
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            System.out.println("Deposited: " + amount);
+        } else {
+            System.out.println("Invalid deposit amount.");
+        }
+    }
+
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+            System.out.println("Withdrawn: " + amount);
+        } else {
+            System.out.println("Invalid or insufficient funds for withdrawal.");
+        }
+    }
+
+    public void displayBalance() {
+        System.out.println("Current balance: " + balance);
+    }
+
+    public static void main(String[] args) {
+        BankAccount account = new BankAccount(123456, "John Doe", 1000.0);
+        account.displayBalance();
+        account.deposit(500);
+        account.displayBalance();
+        account.withdraw(300);
+        account.displayBalance();
+        account.withdraw(1500); // This should show an error message
+    }
+}
+
 
 
 
@@ -128,6 +172,47 @@ A constructor to initialize the student with ID, name, and an array of grades.
 A method to calculate and return the average grade.
 A method to display the student's information and average grade.
 Create a School class with a main method to create a student object, calculate the average grade, and display the student's details.
+
+
+
+
+Code:
+class Student {
+    private int studentId;
+    private String studentName;
+    private double[] grades;
+
+    public Student(int studentId, String studentName, double[] grades) {
+        this.studentId = studentId;
+        this.studentName = studentName;
+        this.grades = grades;
+    }
+
+    public double calculateAverageGrade() {
+        double sum = 0;
+        for (double grade : grades) {
+            sum += grade;
+        }
+        return sum / grades.length;
+    }
+
+    public void displayStudentInfo() {
+        System.out.println("Student ID: " + studentId);
+        System.out.println("Student Name: " + studentName);
+        System.out.println("Average Grade: " + calculateAverageGrade());
+    }
+
+  
+}
+
+public class School{
+      public static void main(String[] args) {
+        double[] grades = {85.5, 90.0, 78.5, 88.0};
+        Student student = new Student(1, "Alice Smith", grades);
+        student.displayStudentInfo();
+    }
+}
+
 
 Question 3: Employee Salary Calculation
 Create a class Employee with the following attributes:

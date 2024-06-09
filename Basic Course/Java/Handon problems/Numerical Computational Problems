@@ -1,0 +1,102 @@
+Q1.
+/* 
+Account Class:
+Defines attributes id, balance, and interestRate.
+Provides a constructor to initialize these attributes.
+Includes getter and setter methods for each attribute.
+
+Solution Class:
+Reads input values (id, balance, interestRate, noOfYears) using Scanner.
+Creates an Account object with the read values.
+Calls the calculateInterest method to compute the interest based on the provided logic.
+Prints the interest amount rounded to three decimal places with the suffix "000".
+
+Calculation Logic:
+Calculate the additional rate by multiplying the initial interest rate by the number of years and then dividing by 100.
+Add this additional rate to the initial interest rate to get the final interest rate.
+Calculate the interest amount by multiplying the balance by the final interest rate and then dividing by 100.
+*/
+
+code:
+import java.util.Scanner;
+
+class Account {
+    private int id;
+    private double balance;
+    private double interestRate;
+
+    // Constructor
+    public Account(int id, double balance, double interestRate) {
+        this.id = id;
+        this.balance = balance;
+        this.interestRate = interestRate;
+    }
+
+    // Getters and setters
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    public double getInterestRate() {
+        return interestRate;
+    }
+
+    public void setInterestRate(double interestRate) {
+        this.interestRate = interestRate;
+    }
+}
+
+class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Read id, balance, and interestRate
+        int id = scanner.nextInt();
+        double balance = scanner.nextDouble();
+        double interestRate = scanner.nextDouble();
+        
+        // Create an Account object
+        Account account = new Account(id, balance, interestRate);
+        
+        // Read noOfYears
+        int noOfYears = scanner.nextInt();
+        
+        // Calculate interest
+        double interest = calculateInterest(account, noOfYears);
+        
+        // Print interest amount rounded to three decimal places with suffix "000"
+        System.out.printf("%.3f000%n", interest);
+        
+        scanner.close();
+    }
+    
+    public static double calculateInterest(Account account, int noOfYears) {
+        double initialInterestRate = account.getInterestRate();
+        double additionalRate = (initialInterestRate / 100) * noOfYears;
+        double finalInterestRate = initialInterestRate + additionalRate;
+        return account.getBalance() * finalInterestRate / 100;
+    }
+}
+
+
+
+
+
+Q2.
+
+
+
+
+

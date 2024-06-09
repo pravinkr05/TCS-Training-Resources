@@ -91,10 +91,81 @@ class Solution {
 }
 
 
+/*
+Question 1: Bank Account Operations
+Create a class BankAccount with the following attributes:
+
+int accountNumber
+String accountHolderName
+double balance
+Include the following methods:
+
+A constructor to initialize the account with account number, account holder name, and initial balance.
+Methods to deposit and withdraw amounts. If withdrawal amount exceeds the balance, display an error message.
+A method to display the current balance.
+Create a Bank class with a main method to test the BankAccount class by creating an account, depositing and withdrawing money, and displaying the balance.
+*/
+
+code:
 
 
 
-Q2.
+
+
+
+
+
+
+Question 2: Student Grades Calculation
+Create a class Student with the following attributes:
+
+int studentId
+String studentName
+double[] grades (an array of doubles to store grades)
+Include the following methods:
+
+A constructor to initialize the student with ID, name, and an array of grades.
+A method to calculate and return the average grade.
+A method to display the student's information and average grade.
+Create a School class with a main method to create a student object, calculate the average grade, and display the student's details.
+
+Question 3: Employee Salary Calculation
+Create a class Employee with the following attributes:
+
+int employeeId
+String employeeName
+double basicSalary
+double hra (House Rent Allowance)
+double da (Dearness Allowance)
+Include the following methods:
+
+A constructor to initialize the employee with ID, name, basic salary, hra, and da.
+A method to calculate and return the total salary (basicSalary + hra + da).
+A method to display the employee's information and total salary.
+Create a Company class with a main method to create an employee object, calculate the total salary, and display the employee's details.
+
+Question 4: Library Book Management
+Create a class Book with the following attributes:
+
+int bookId
+String bookTitle
+String author
+boolean isCheckedOut (indicating if the book is currently checked out)
+Include the following methods:
+
+A constructor to initialize the book with ID, title, author, and checked-out status.
+Methods to check out and return the book, updating the isCheckedOut status accordingly.
+A method to display the book's information.
+Create a Library class with a main method to create book objects, check out and return books, and display book details.
+
+Question 5: Simple Calculator
+Create a class Calculator with the following methods:
+
+A method add that takes two double parameters and returns their sum.
+A method subtract that takes two double parameters and returns their difference.
+A method multiply that takes two double parameters and returns their product.
+A method divide that takes two double parameters and returns their quotient. If the divisor is zero, display an error message.
+Create a Main class with a main method to test the Calculator class by performing various arithmetic operations and displaying the results.
 
 
 
